@@ -1,5 +1,5 @@
 # WorkShop_REACTJS
-A react workshop
+
 Premier programme en React
 Introduction :
 L'objectif de ce Workshop est de découvrir React au travers d’une application de recensement de films
