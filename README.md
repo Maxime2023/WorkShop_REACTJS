@@ -24,7 +24,9 @@ https://reacttraining.com/react-router/web/guides/quick-start
 TP
 
 Le But de ce projet est de vous initier à la programmation Web, en récupérant les informations à partir d’une API, pour créer un catalogue de films.
+
 API : https://api.themoviedb.org/3/discover/movie?api_key=4d4ed145d3584846f5922b6a467e1f85
+
 Ce projet comporte 2 parties : 
 La première est de récupérer tous les films populaires sur l’API et de les afficher
 La seconde est d’afficher les informations détaillées d’un film lors d’un clic
