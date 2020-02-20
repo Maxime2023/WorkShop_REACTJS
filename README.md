@@ -1,10 +1,14 @@
 # WorkShop_REACTJS
 
 Premier programme en React
-Introduction :
-L'objectif de ce Workshop est de découvrir React au travers d’une application de recensement de films
+
+Introduction
+
 React est une bibliothèque JavaScript libre développée par Facebook depuis 2013. Le but principal de cette bibliothèque est de faciliter la création d'application web monopage, via la création de composants dépendant d'un état et générant une page (ou portion) HTML à chaque changement d'état.
-Prérequis :
+L'objectif de ce Workshop est de découvrir React au travers d’une application de recensement de films.
+
+Prérequis
+
 Pour commencer notre Workshop vous devez installer NodeJs.
 
 https://nodejs.org/en/
