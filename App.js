@@ -14,18 +14,34 @@ class App extends Component {
     films_list: [],
   }
   componentDidMount() {
-    # A completer => chargement de l'API ici #
+    axios.get(`https://api.themoviedb.org/3/discover/movie?api_key=4d4ed145d3584846f5922b6a467e1f85`)
+      .then(res => {
+        const films_list = res.data.results;
+        this.setState({ films_list });
+      })
   }
   render() {
+  const style = {width: "200px"};
   return (
     <div>
-    # A completer => Header #
+    <div className="Header">Workshop ReactJS</div>
     <Router>
       <div>
         <Switch>
         <Route path="/about" component={Description}/>
           <Route path="/">
-          # A completer => gestion des routes #
+           <div className="flex-row-container" >
+                 {this.state.films_list.map(film => 
+                    <div className="flex-row-item" >
+                        <div className="Image">
+                            <Link to={{ pathname: "/about", film: {film}}} ><img style={style} src= {`https://image.tmdb.org/t/p/w600_and_h900_bestv2`+ film.poster_path}  alt={film.title}></img></Link>
+                        </div>
+                        <div>
+                            {film.title.slice(0, 20)}
+                        </div>
+                    </div>
+                )}
+             </div>
           </Route>
         </Switch>
       </div>
@@ -34,5 +50,6 @@ class App extends Component {
   );
 }
 }
+
 
 export default App
