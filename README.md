@@ -16,7 +16,7 @@ https://nodejs.org/en/
 SetUp
 
 1.	Utiliser la commande suivante sur votre bureau : 
-« npx-create-react-app films »
+« npx create-react-app films »
 2.	Une fois à la racine de votre projet effectuez la commande suivante :
 3.	« npm i »
 4.	Il vous faudra installer les dépendances suivantes :
