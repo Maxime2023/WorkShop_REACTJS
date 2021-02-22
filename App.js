@@ -7,43 +7,47 @@ import {
 } from "react-router-dom";
 import axios from 'axios';
 import './App.css'
-import Description from './Description';
+// Ne pas oublier de créer le fichier Description.js import Description from './Description';
 
 class App extends Component {
     state = {
-      //variable propre au composant ex: arrayOfMovies
+    films_list: [],
   }
   componentDidMount() {
-    axios.get("///urlAPI///")
+    axios.get(`https://api.themoviedb.org/3/discover/movie?api_key=4d4ed145d3584846f5922b6a467e1f85`)
       .then(res => {
-        ////stocker le resultat dans la variable composant
+        const films_list = res.data.results;
+        this.setState({ films_list });
       })
   }
   render() {
+  const style = {width: "200px"};
   return (
     <div>
-    {/* debut rooter */}
+      <div className="header">
+        REACTJS WORKSHOP
+      </div>
+    <Router>
       <div>
-        {/* debut switch */}
-        {/* 1ere route appelle le fichier Description.js */}
-          {/* debut 2eme route */}
+        <Switch>
+        {/* Ne pas oublier de créer le fichier Description.js <Route path="/about" component={Description}/> */}
+          <Route path="/">
            <div className="flex-row-container">
-             {/* la fonction map permet de prendre chaque elements d'un tableau et de les traiter un par un */}
                  {this.state.films_list.map(film => 
                     <div>
                         <div>
-                            {/* image du film, syntaxe particuliere a respecter*/}
+                            <Link to={{ pathname: "/about", film: {film}}} ><img style={style} src= {`https://image.tmdb.org/t/p/w600_and_h900_bestv2`+ film.poster_path}  alt={film.title}></img></Link>
                         </div>
                         <div>
-                            {/* titre du film  */}
+                            {film.title.slice(0, 20)}
                         </div>
                     </div>
                 )}
              </div>
-          {/* fin 2eme route */}
-        {/* fin du du switch */}
+          </Route>
+        </Switch>
       </div>
-    {/* fin rooter */}
+    </Router>
     </div>
   );
 }
