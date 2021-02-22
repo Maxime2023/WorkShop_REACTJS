@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './Description.css'
+// créer le fichier Description.css import './Description.css'
 class Description extends Component {
     state = {
         // pareil que dans app.js creer un variable d'etat qui va stocker les infos
