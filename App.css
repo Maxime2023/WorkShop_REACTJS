@@ -13,14 +13,3 @@
   flex: 1 1 28%;
   margin: 2%;
 }
-
-.header {
-  background-color: black;
-  position: fixed;
-  width: 100%;
-  color: white;
-  text-align: center;
-  padding: 2%;
-  font-size: 22px;
-  z-index: 2;
-}
