@@ -12,7 +12,14 @@ class Description extends Component {
     }
     render() {
         return (
-            <div>Description</div>
+            <div>
+            ///permet de verifier si filmDescription est vide ou non
+                {Object.keys(this.state.filmDescription).length === 0 ? <div>chargement</div> : 
+                <div className="Wrapper">
+                    <div><h1>Titre :</h1> {this.state.filmDescription.original_title}</div>
+                </div>
+                }
+            </div>
         );
     }
 }
