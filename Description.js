@@ -9,6 +9,7 @@ class Description extends Component {
         //on met à jour la variable filmDescription, avec les props que nous envoient le composant parent (App.js)  =>this.props correspond à ce que "recoit en parametre" Description.js
     }
     render() {
+        console.log(this.state.filmDescription);
         return (
             <div>Description</div>
         );
