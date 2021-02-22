@@ -35,5 +35,9 @@ Ce projet comporte 2 parties :
 La première est de récupérer tous les films populaires sur l’API et de les afficher
 La seconde est d’afficher les informations détaillées d’un film lors d’un clic
 
+Afin d'avoir les memes informations :
+- On utilisera le fichier App.js, présent lors du téléchargement de reactJs, dans celui ci sera présent la liste des différents films.
+- On utilisera un deuxieme fichier Description.js, qui lui servira à afficher les infos détaillées du film séléctionnée.
+
 
 
